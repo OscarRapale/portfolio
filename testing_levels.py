@@ -29,6 +29,7 @@ class User:
     def calculate_xp_for_next_level(self):
         return 100 + (self.level - 1) * 50  # XP needed increases with each level
 
+    # Just for testing purposes only, will be replaced by database
     def save_data(self):
         data = {
             'name': self.name,
@@ -40,6 +41,7 @@ class User:
         with open(f'{self.name}_data.json', 'w') as f:
             json.dump(data, f)  # Save user data to a JSON file
 
+    # Just for testing purposes only, will be replaced by database
     def load_data(self):
         try:
             with open(f'{self.name}_data.json', 'r') as f:
