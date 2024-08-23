@@ -28,14 +28,14 @@ class User:
 
 
 class Task:
-    def __init__(self, description, exp_reward):
+    def __init__(self, description, xp_reward):
         self.description = description
-        self.exp_reward = exp_reward
+        self.xp_reward = xp_reward
         self.completed = False
 
     def complete_task(self, user):
         if not self.completed:
-            user.gain_xp(self.exp_reward)  # User gains XP for completing the task
+            user.gain_xp(self.xp_reward)  # User gains XP for completing the task
             self.completed = True
             print(f"Task '{self.description}' completed!\n")
         else:
